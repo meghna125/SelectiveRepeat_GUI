@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
    // sheetal chnages
-    public int  flag = 0;
+    private int  flag = 0;
 
     //
 
