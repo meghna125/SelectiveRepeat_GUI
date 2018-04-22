@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     public int f2 = 0;
     public int f3=0;
     public int f4=0;
+    public int s=0;
+    public int b=0;
 
     Button p1;
     Button p2;
@@ -35,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
     TextView t4;
     TextView t5;
     TextView t6;
-
+    TextView seq;
+    TextView base;
     boolean stop1;
     boolean stop2;
     boolean stop3;
@@ -68,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
         t4=(TextView)findViewById(R.id.t4);
         t5=(TextView)findViewById(R.id.t5);
         t6=(TextView)findViewById(R.id.t6);
+        seq=(TextView)findViewById(R.id
+               .seq);
+        base=(TextView)findViewById(R.id.base);
 
 
         p1.setBackgroundColor(Color.CYAN);
@@ -77,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                s=s+1;
+                seq.setText(String.valueOf(s));
                 stop1=false;
                 timer1();
                 Toast.makeText(getApplicationContext(),"Packet 1 sent! 20s Timer starts..",Toast.LENGTH_SHORT).show();
@@ -98,6 +106,8 @@ public class MainActivity extends AppCompatActivity {
                 if(fl == 1){
                     if(f2==1){
                         p4.setBackgroundColor(Color.CYAN);
+                        b=b+2;
+                        base.setText(String.valueOf(b));
 
                     }
                 }
@@ -114,6 +124,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                s=s+1;
+                seq.setText(String.valueOf(s));
                 stop2=false;
                 timer2();
                 Toast.makeText(getApplicationContext(),"Packet 2 sent! 20s Timer starts..",Toast.LENGTH_SHORT).show();
@@ -133,6 +145,8 @@ public class MainActivity extends AppCompatActivity {
                     if(f2 == 1){
                         p2.setBackgroundColor(Color.YELLOW);
                         p4.setBackgroundColor(Color.CYAN);
+                        b=b+2;
+                        base.setText(String.valueOf(b));
 
                     }
                 }
@@ -156,7 +170,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-
+                s=s+1;
+                seq.setText(String.valueOf(s));
                 stop3=false;
                 timer3();
                 Toast.makeText(getApplicationContext(),"Packet 3 sent! 20s Timer starts..",Toast.LENGTH_SHORT).show();
@@ -175,6 +190,8 @@ public class MainActivity extends AppCompatActivity {
                 if(f3==1){
                     if(f4==1){
                         p6.setBackgroundColor(Color.CYAN);
+                        b=b+2;
+                        base.setText(String.valueOf(b));
 
                     }
                 }
@@ -190,6 +207,9 @@ public class MainActivity extends AppCompatActivity {
         p4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                s=s+1;
+                seq.setText(String.valueOf(s));
 
                 stop4=false;
                 timer4();
@@ -210,6 +230,8 @@ public class MainActivity extends AppCompatActivity {
                     if(f3 == 1){
                         p4.setBackgroundColor(Color.YELLOW);
                         p6.setBackgroundColor(Color.CYAN);
+                        b=b+2;
+                        base.setText(String.valueOf(b));
 
                     }
                 }
@@ -232,6 +254,9 @@ public class MainActivity extends AppCompatActivity {
         p5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                s=s+1;
+                seq.setText(String.valueOf(s));
 
                 stop5=false;
                 timer5();
@@ -258,6 +283,9 @@ public class MainActivity extends AppCompatActivity {
         p6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                s=s+1;
+                seq.setText(String.valueOf(s));
 
                 stop6=false;
                 timer6();
